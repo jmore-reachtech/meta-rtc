@@ -1,0 +1,29 @@
+From 9d8b90ab3b249e64b9161c7acad20fa1bde4f4ce Mon Sep 17 00:00:00 2001
+From: Jeff Horn <jeff@everlook.net>
+Date: Thu, 10 Dec 2015 09:54:51 -0800
+Subject: [PATCH] Add rtc to I2C bus
+
+Signed-off-by: Jeff Horn <jeff@everlook.net>
+---
+ arch/arm/boot/dts/imx6dl-g2h.dtsi | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/arch/arm/boot/dts/imx6dl-g2h.dtsi b/arch/arm/boot/dts/imx6dl-g2h.dtsi
+index 03b1214..43767a3 100644
+--- a/arch/arm/boot/dts/imx6dl-g2h.dtsi
++++ b/arch/arm/boot/dts/imx6dl-g2h.dtsi
+@@ -140,6 +140,12 @@
+         max-y = <2047>;
+        };
+ 
++       rtc: rtc@68 {
++           compatible = "nxp,pcf8523";
++           reg = <0x68>;
++           status = "okay";
++       };
++
+     codec: sgtl5000@0a {
+                compatible = "fsl,sgtl5000";
+                reg = <0x0a>;
+-- 
+1.9.1
