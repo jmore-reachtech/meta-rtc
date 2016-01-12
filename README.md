@@ -1,2 +1,2 @@
-# meta-spex
-meta-layer for SPEX SamplePrep
+# meta-rtc
+meta-layer for RTC patch
